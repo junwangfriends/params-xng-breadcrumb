@@ -36,7 +36,7 @@
     "prepare": "husky install",
     "serve-docs": "docsify serve docs"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "14.0.0",
     "@angular/cdk": "14.0.1",
