@@ -72,6 +72,33 @@
       </xng-breadcrumb>
     </div>
 
+    <div>
+      <label for="advancedTemplate2"
+        >Allow internval=x or site=1 in url params and pass over</label
+      >
+      <xng-breadcrumb
+        [separator]="separatorTemplate"
+        class="myapp-breadcrumb"
+        id="advancedTemplate2"
+        [preserveFragment]="false"
+        anchorTarget="_blank"
+        [allowedParams]="['interval', 'site']"
+      >
+        <ng-container
+          *xngBreadcrumbItem="
+            let breadcrumb;
+            let info = info;
+            let first = first
+          "
+        >
+          <mat-icon *ngIf="info">{{ info }}</mat-icon>
+          <ng-container *ngIf="!first">{{
+            breadcrumb | titlecase
+          }}</ng-container>
+        </ng-container>
+      </xng-breadcrumb>
+    </div>
+
     <router-outlet></router-outlet>
   </section>
 </div>

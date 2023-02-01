@@ -51,6 +51,13 @@ export class BreadcrumbComponent implements OnInit {
   @Input() preserveFragment = true;
 
   /**
+   * Provide the params list from state
+   *
+   * @memberof BreadcrumbComponent
+   */
+  @Input() allowedParams: string | [];
+
+  /**
    * custom class provided by consumer to increase specificity
    * This will benefit to override styles that are conflicting
    */
