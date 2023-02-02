@@ -1,9 +1,10 @@
 {
   "name": "params-xng-breadcrumb",
-  "version": "8.0.3",
+  "version": "8.0.4",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
+    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "nx": "nx",
     "start": "nx serve",
     "start:ssr": "nx serve-ssr ssr",
